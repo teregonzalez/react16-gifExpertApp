@@ -7,6 +7,8 @@ export const AddCategory = ({ setCategories }) => {
 
     const handleInputChange = ( e ) => {
         setInputValue( e.target.value );
+
+        console.log('handleInputChange llamado');
     }
 
     const handleSubmit = (e) => {
@@ -16,11 +18,11 @@ export const AddCategory = ({ setCategories }) => {
             setCategories( cats => [ inputValue, ...cats, ] );
             setInputValue('');
         }
-
     }
 
     return (
         <form onSubmit={ handleSubmit }>
+            <p> { inputValueu }</p>
             <input 
                 type="text"
                 value={ inputValue }
@@ -29,7 +31,6 @@ export const AddCategory = ({ setCategories }) => {
         </form>
     )
 }
-
 
 AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
