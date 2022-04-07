@@ -22,7 +22,7 @@ export const AddCategory = ({ setCategories }) => {
 
     return (
         <form onSubmit={ handleSubmit }>
-            <p> { inputValueu }</p>
+            <p> { inputValue }</p>
             <input 
                 type="text"
                 value={ inputValue }
